@@ -1,0 +1,110 @@
+﻿[18:04] Фатеев Руслан Викторович
+
+
+body {
+    font-family: "Arial";
+}
+
+h1.title {
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+div#nav {
+    text-align: center;
+}
+
+    div#nav a {
+        font: bold 1.1em "Arial Narrow","Franklin Gothic Medium",Arial;
+        display: inline-block;
+        color: black;
+        padding: 6px;
+        border: solid medium black;
+        text-decoration: none;
+        width: 200px;
+        text-align: center;
+    }
+
+        div#nav a:hover {
+            background: #888;
+            color: white;
+        }
+
+.adminContent {
+    margin: 20px 0;
+    border: solid thin black;
+    padding: 5px;
+}
+
+#ordersCheck {
+    font: bold 1.1em "Arial Narrow","Franklin Gothic Medium",Arial;
+    margin-top: 10px;
+    text-align: center;
+}
+
+div.outerContainer {
+    text-align: center;
+}
+
+table {
+    display: inline-block;
+    text-align: left;
+    margin: 20px 0;
+}
+
+    table th, table td {
+        text-align: left;
+        width: 100px;
+        padding: 0px 10px;
+    }
+
+#ordersTable th:nth-last-child(2), #ordersTable td:nth-last-child(2) {
+    text-align: right;
+}
+
+#productsTable td.description span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 150px;
+    display: inline-block;
+}
+
+#productsTable td:last-of-type {
+    width: 210px;
+}
+
+#productsTable input[type=submit] {
+    width: 100px;
+    padding: 8px;
+}
+
+.loginContainer {
+    padding: 10px;
+    text-align: center;
+}
+
+    .loginContainer label {
+        display: inline-block;
+        width: 120px;
+        margin: 5px;
+    }
+
+    .loginContainer input {
+        width: 150px;
+        margin: 5px;
+    }
+
+    .loginContainer button {
+        margin-top: 10px;
+    }
+
+.error {
+    color: red;
+    text-align: center;
+    margin: 10px;
+}
+
+<https://teams.microsoft.com/l/message/19:88c3d121c65d4188868b3b1fe6a49c2f@thread.tacv2/1594652674313?tenantId=1c2aa41e-5b92-4906-827e-0c10f9d73859&amp;groupId=617d42e0-072c-4fca-8361-b78bf1b96000&amp;parentMessageId=1594652382454&amp;teamName=СПВ 18о 1 (ПВ811)&amp;channelName=Общий&amp;createdTime=1594652674313 >
