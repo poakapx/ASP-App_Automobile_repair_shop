@@ -36,10 +36,10 @@ namespace Automobile_repair_shop.Pages.Admin
         }
         public void InsertService()
         {
-            Service service = new Service();
-            if (TryUpdateModel(service, new FormValueProvider(ModelBindingExecutionContext)))
+            Service myService = new Service();
+            if (TryUpdateModel(myService, new FormValueProvider(ModelBindingExecutionContext)))
             {
-                repository.SaveService(service);
+                repository.SaveService(myService);
             }
         }
     }

@@ -7,11 +7,11 @@ namespace Automobile_repair_shop.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(IsPostBack)
+            if (IsPostBack)
             {
                 string name = Request.Form["name"];
                 string password = Request.Form["password"];
-                if(name != null && password != null)
+                if (name != null && password != null)
                 {
                     FormsAuthentication.SetAuthCookie(name, false);
                     Response.Redirect(Request["ReturnUrl"] ?? "/");

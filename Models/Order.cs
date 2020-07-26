@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
 namespace Automobile_repair_shop.Models
 {
     public class Order

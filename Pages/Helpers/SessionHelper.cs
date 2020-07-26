@@ -1,8 +1,5 @@
 ﻿using Automobile_repair_shop.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.SessionState;
 
 namespace Automobile_repair_shop.Pages.Helpers
@@ -21,7 +18,7 @@ namespace Automobile_repair_shop.Pages.Helpers
         public static Cart GetCart(HttpSessionState session)
         {
             Cart cart = Get<Cart>(session, SessionKey.CART);
-            if(cart == null)
+            if (cart == null)
             {
                 cart = new Cart();
                 Set(session, SessionKey.CART, cart);

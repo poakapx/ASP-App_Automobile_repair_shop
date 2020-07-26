@@ -1,24 +1,25 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Store.Master.cs" Inherits="Automobile_repair_shop.Pages.Store" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Store.master.cs" Inherits="Automobile_repair_shop.Pages.Store" %>
 
 <!DOCTYPE html>
 
 <html>
-<head runat="server">
-    <link rel="stylesheet" href="../Content/Style.css" />
-    <title>СТО</title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div id="header">
-            <GS:CartSummary runat="server"/>
-            <div class="title">СТО</div>
-        </div>
-        <div id="categories">
-            <GS:CategoryLinks runat="server" />
-        </div>
-        <div>
-            <asp:ContentPlaceHolder ID="bodyContent" runat="server"/>
-        </div>
-    </form>
-</body>
+    <head runat="server">
+        <title>СТО</title>
+        <link rel="stylesheet" href="../Content/Style.css" />
+        <%: System.Web.Optimization.Scripts.Render("~/bundles/validation") %>
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <div id="header">
+                <GS:CartSummary runat="server"/>
+                <div class="title">СТО</div>
+            </div>
+            <div id="categories">
+                <GS:CategoryLinks runat="server" />
+            </div>
+            <div>
+                <asp:ContentPlaceHolder ID="bodyContent" runat="server"/>
+            </div>
+        </form>
+    </body>
 </html>

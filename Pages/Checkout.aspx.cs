@@ -14,10 +14,10 @@ namespace Automobile_repair_shop.Pages
             checkoutForm.Visible = true;
             checkoutMessage.Visible = false;
 
-            if(IsPostBack)
+            if (IsPostBack)
             {
                 Order order = new Order();
-                if(TryUpdateModel(order, new FormValueProvider(ModelBindingExecutionContext)))
+                if (TryUpdateModel(order, new FormValueProvider(ModelBindingExecutionContext)))
                 {
                     order.OrderLines = new List<OrderLine>();
 

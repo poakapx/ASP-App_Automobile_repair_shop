@@ -3,7 +3,7 @@
 <asp:Content ContentPlaceHolderID="bodyContent" runat="server">
     <div id="content">
       <asp:Repeater ItemType="Automobile_repair_shop.Models.Service" SelectMethod="GetServices" runat="server">
-          <ItemTemplate>service
+          <ItemTemplate>
               <div class="item">
                   <h3><%# Item.Name %></h3>
                   <%# Item.Description %>

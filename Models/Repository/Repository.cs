@@ -22,7 +22,7 @@ namespace Automobile_repair_shop.Models.Repository
                 order = context.Orders.Add(order);
                 foreach (OrderLine line in order.OrderLines)
                 {
-                    context.Entry(line.Service).State = System.Data.Entity.EntityState.Modified;
+                    context.Entry(line.Service).State = EntityState.Modified;
                 }
             }
             else

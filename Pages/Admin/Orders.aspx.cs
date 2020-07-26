@@ -13,13 +13,13 @@ namespace Automobile_repair_shop.Pages.Admin
         private Repository repository = new Repository();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(IsPostBack)
+            if (IsPostBack)
             {
                 int dispatchID;
-                if(int.TryParse(Request.Form["dispatch"], out dispatchID))
+                if (int.TryParse(Request.Form["dispatch"], out dispatchID))
                 {
                     Order myOrder = repository.Orders.Where(x => x.OrderId == dispatchID).FirstOrDefault();
-                    if(myOrder != null)
+                    if (myOrder != null)
                     {
                         myOrder.Dispatched = true;
                         repository.SaveOrder(myOrder);
