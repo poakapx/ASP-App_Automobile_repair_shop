@@ -8,7 +8,17 @@
         <link rel="stylesheet" href="../Content/Style.css" />
         <%: System.Web.Optimization.Scripts.Render("~/bundles/validation") %>
     </head>
-    <body>
+    <body id="body">
+
+        <table style="margin-right: auto; margin-left: auto">
+	        <tbody>
+		        <tr>
+			        <td><button onclick="myFunction1()">Чёрный цвет</button></td>
+			        <td><button onclick="myFunction2()">Белый цвет</button></td>
+		        </tr>
+	        </tbody>
+        </table>
+        
         <form id="form1" runat="server">
             <div id="header">
                 <GS:CartSummary runat="server"/>
@@ -22,4 +32,16 @@
             </div>
         </form>
     </body>
+
+        <script>
+            function myFunction1()
+            {
+                document.getElementById("body").style.background = "black";
+            }
+            function myFunction2()
+            {
+                document.getElementById("body").style.background = "white";
+            }
+        </script>
+
 </html>
