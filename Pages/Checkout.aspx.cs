@@ -3,6 +3,8 @@ using Automobile_repair_shop.Models.Repository;
 using Automobile_repair_shop.Pages.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Net;
+using System.Net.Mail;
 using System.Web.ModelBinding;
 
 namespace Automobile_repair_shop.Pages
@@ -38,6 +40,32 @@ namespace Automobile_repair_shop.Pages
 
                     checkoutForm.Visible = false;
                     checkoutMessage.Visible = true;
+
+                    //Доделать потом надо будет...
+                    var fromAddress = new MailAddress("Test@gmail.com", "From Test");
+                    var toAddress = new MailAddress("pavelocheretyany2001@gmail.com", "To Pavlo");
+                    const string fromPassword = "Rjhybqxer1";
+                    const string subject = "Покупка деталей на СТО";
+
+                    string body = "Вы оплатиле следующие товары: на сумму ...";
+
+                    var smtp = new SmtpClient
+                    {
+                        Host = "smtp.gmail.com",
+                        Port = 587,
+                        EnableSsl = true,
+                        DeliveryMethod = SmtpDeliveryMethod.Network,
+                        UseDefaultCredentials = false,
+                        Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                    };
+                    using (var message = new MailMessage(fromAddress, toAddress)
+                    {
+                        Subject = subject,
+                        Body = body
+                    })
+                    {
+                        smtp.Send(message);
+                    }
                 }
             }
         }
