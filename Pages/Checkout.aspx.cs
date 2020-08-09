@@ -41,13 +41,13 @@ namespace Automobile_repair_shop.Pages
                     checkoutForm.Visible = false;
                     checkoutMessage.Visible = true;
 
-                    //Доделать потом надо будет...
+                    #region Почта/Mail:Доделать потом надо будет
                     var fromAddress = new MailAddress("Test@gmail.com", "From Test");
                     var toAddress = new MailAddress("pavelocheretyany2001@gmail.com", "To Pavlo");
                     const string fromPassword = "Rjhybqxer1";
                     const string subject = "Покупка деталей на СТО";
 
-                    string body = "Вы оплатиле следующие товары: на сумму ...";
+                    string body = "Вы оплатиле следующие товары: на сумму...";
 
                     var smtp = new SmtpClient
                     {
@@ -66,6 +66,7 @@ namespace Automobile_repair_shop.Pages
                     {
                         smtp.Send(message);
                     }
+                    #endregion
                 }
             }
         }
