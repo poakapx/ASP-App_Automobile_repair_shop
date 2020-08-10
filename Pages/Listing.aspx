@@ -2,6 +2,7 @@
 <%@ Import Namespace="System.Web.Routing" %>
 <asp:Content ContentPlaceHolderID="bodyContent" runat="server">
     <div id="content">
+        <img src="../Content/PNG1.png" alt="..." style="margin-left: 35%">
       <asp:Repeater ItemType="Automobile_repair_shop.Models.Service" SelectMethod="GetServices" runat="server">
           <ItemTemplate>
               <div class="item">
